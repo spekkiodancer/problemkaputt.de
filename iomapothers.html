@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNES I/O Mapping: Other Hardware</title>
+</head>
+<body>
+    <h1>SNES I/O Mapping: Other Hardware</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">Audio Processing Unit (APU)</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">Virtual Address</th>
+                <th scope="col">Register Code Name</th>
+                <th scope="col">Register Description</th>
+                <th scope="col">Video Output Mode</th>
+                <th scope="col">RAM Access</th>
+                <th scope="col">Timing Interval</th>
+            </tr>
+            <tr>
+                <td><code>$2140</code></td>
+                <td>APUIO0</td>
+                <td>APU IO Registers</td>
+                <td>single</td>
+                <td>both</td>
+                <td>any time</td>
+            </tr>
+            <tr>
+                <td><code>$2141</code></td>
+                <td>APUIO1</td>
+                <td>APU IO Registers</td>
+                <td>single</td>
+                <td>both</td>
+                <td>any time</td>
+            </tr>
+            <tr>
+                <td><code>$2142</code></td>
+                <td>APUIO2</td>
+                <td>APU IO Registers</td>
+                <td>single</td>
+                <td>both</td>
+                <td>any time</td>
+            </tr>
+            <tr>
+                <td><code>$2143</code></td>
+                <td>APUIO3</td>
+                <td>APU IO Registers</td>
+                <td>single</td>
+                <td>both</td>
+                <td>any time</td>
+            </tr>
+            <tr>
+                <td><code>$2144..$217F</code>(mirrored)</td>
+                <td></td>
+                <td>APU Ports 2140-2143h mirrored to <code>$2144h..$217Fh</code></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+            <th colspan="5">WRAM</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">Virtual Address</th>
+                <th scope="col">Register Code Name</th>
+                <th scope="col">Register Description</th>
+                <th scope="col">Video Output Mode</th>
+                <th scope="col">RAM Access</th>
+                <th scope="col">Timing Interval</th>
+            </tr>
+
+            <tr>
+                <td><code>$2180</code></td>
+                <td>WMDATA</td>
+                <td>WRAM Data Read/Write</td>
+                <td>single</td>
+                <td>both</td>
+                <td>anytime</td>
+            </tr>
+            <tr>
+                <td><code>$2181</code></td>
+                <td>WMADDL</td>
+                <td>WRAM Address (lower 8bit)</td>
+                <td>single</td>
+                <td>write</td>
+                <td>anytime</td>
+            </tr>
+            <tr>
+                <td><code>$2182</code></td>
+                <td>WMADDM</td>
+                <td>WRAM Address (middle 8bit)</td>
+                <td>single</td>
+                <td>write</td>
+                <td>anytime</td>
+            </tr>
+            <tr>
+                <td><code>$2183</code></td>
+                <td>WMADDH</td>
+                <td>WRAM Address (upper 1bit)</td>
+                <td>single</td>
+                <td>write</td>
+                <td>anytime</td>
+            </tr>
+            <tr>
+                <td><code>$2184h..$21FF</code></td>
+                <td></td>
+                <td>Unused region (open bus) / Expansion (B-Bus)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><code>$2200h..$3FFF</code></td>
+                <td></td>
+                <td>Unused region (open bus) / Expansion (A-Bus)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+<h2>CPU Mappings</h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="5">CPU On-Chip I/O Ports (Write-only)</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
